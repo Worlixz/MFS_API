@@ -1,11 +1,18 @@
 const express = require('express')
-
-const PORT = 8000
+const cors = require('cors')
+let cours = require('./src/db/mock-cours')
 
 const app = express()
+const PORT = 8000
+
+app.use(cors())
 
 app.get('/', (req, res) => {
-    res.json('Hello API')
+    res.json('Hello MFS API')
+})
+
+app.get('/api/cours', (req, res) => {
+    res.send(cours)
 })
 
 
