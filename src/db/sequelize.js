@@ -59,8 +59,4 @@ const initDb = () => {
     })
 }
 
-const logDb = () => {
-    console.log('je suis dans la fonction logDB')
-}
-
-module.exports = { seqAuth, initDb }
+module.exports = { seqAuth, initDb, Cours, User }

@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const bodyParser = require('body-parser')
 const { seqAuth, initDb } = require('./src/db/sequelize')
 let cours = require('./src/db/mock-cours')
 
@@ -10,7 +11,9 @@ const PORT = 8000
 
 initDb()
 
-app.use(cors())
+app
+    .use(cors())
+    .use(bodyParser.json())
 
 app.get('/', (req, res) => {
     res.json('Hello MFS API')
@@ -19,6 +22,9 @@ app.get('/', (req, res) => {
 app.get('/api/cours', (req, res) => {
     res.send(cours)
 })
+
+require('./src/routes/findAllCours')(app)
+require('./src/routes/login')(app)
 
 app.get('api/login', (req, res) => {
     

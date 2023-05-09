@@ -118,7 +118,7 @@ const cours = [
     },
     "duration": 25,
     "author": "Gérémy DUMAS",
-    "premium": true,
+    "premium": false,
     "date": "2023-05-01",
     "picture_SD": "Url picture SD",
     "picture_HD": "Url picture HD"
