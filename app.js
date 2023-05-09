@@ -1,9 +1,14 @@
 const express = require('express')
 const cors = require('cors')
+const { seqAuth, initDb } = require('./src/db/sequelize')
 let cours = require('./src/db/mock-cours')
+
+// ajout de la librairie Sharp.js pour redimmensionner les photos pour les rendre beaucoup plus lègre
 
 const app = express()
 const PORT = 8000
+
+initDb()
 
 app.use(cors())
 
@@ -13,6 +18,10 @@ app.get('/', (req, res) => {
 
 app.get('/api/cours', (req, res) => {
     res.send(cours)
+})
+
+app.get('api/login', (req, res) => {
+    
 })
 
 

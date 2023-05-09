@@ -119,7 +119,9 @@ const cours = [
     "duration": 25,
     "author": "Gérémy DUMAS",
     "premium": true,
-    "date": "2023-05-01"
+    "date": "2023-05-01",
+    "picture_SD": "Url picture SD",
+    "picture_HD": "Url picture HD"
   },
   {
     "title": "Les filières énergétiques",
@@ -250,7 +252,9 @@ const cours = [
     "duration": 20,
     "author": "Gérémy DUMAS",
     "premium": false,
-    "date": "2023-05-31"
+    "date": "2023-05-31",
+    "picture_SD": "Url picture SD",
+    "picture_HD": "Url picture HD"
   }
 ]
 
