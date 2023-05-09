@@ -17,6 +17,8 @@ app
 
 app.get('/', (req, res) => {
     res.json('Hello MFS API')
+    const token = req.headers.bearer
+    console.log(token)
 })
 
 app.get('/api/cours', (req, res) => {
@@ -25,10 +27,8 @@ app.get('/api/cours', (req, res) => {
 
 require('./src/routes/findAllCours')(app)
 require('./src/routes/login')(app)
+require('./src/routes/dashboard')(app)
 
-app.get('api/login', (req, res) => {
-    
-})
 
 
 app.listen(PORT, () => {

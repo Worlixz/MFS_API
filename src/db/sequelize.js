@@ -52,10 +52,10 @@ const initDb = () => {
         })
         console.log('la db est mise à jour');
 
-        /* bcrypt.hash(process.env.USER_PWD, 10)
+        bcrypt.hash(process.env.USER_PWD, 10)
         .then(hash => {
             User.create({u_name: process.env.USER_NAME, u_email: process.env.USER_EMAIL, u_password: hash, u_role: process.env.USER_ROLE})
-        }) */
+        })
     })
 }
 
