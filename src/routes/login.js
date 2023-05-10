@@ -3,7 +3,11 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
 
-
+// Lors de la création de mon token d'authentification je dois y mettres les paramètres suivants : 
+// -- ID User
+// -- User Name permet l'affichage conditionnel de la nav bar
+// -- User statut => Est-ce que le membre a un abonnement en cours ou non
+// -- User rôle => Permettre de modifier l'affichage en fonction et les fonctionnalités du dashboard
 
 module.exports = (app) => {
     app.post('/api/login', (req, res) => {
@@ -21,9 +25,14 @@ module.exports = (app) => {
                     const message = "Le mot de passé n'est pas valide"
                     res.status(401).json({ message })
                 }
-
+                console.log(user)
                 const token = jwt.sign(
-                    {userID: user.id},
+                    {
+                        userID: user.id,
+                        userName: user.u_name,
+                        userStatut: user.u_statut,
+                        userRole: user.u_role
+                    },
                     process.env.PRIVATE_KEY,
                     { expiresIn: '24h'}
                 )

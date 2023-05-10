@@ -32,6 +32,9 @@ module.exports = ( sequelize, DataTypes) => {
         },
         u_password: {
           type: DataTypes.STRING
+        },
+        u_statut: {
+          type: DataTypes.BOOLEAN
         }
       })
 }

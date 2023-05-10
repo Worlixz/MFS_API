@@ -2,6 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize')
 const CoursModel = require('../models/cours')
 const UserModel = require('../models/user')
 const cours = require('./mock-cours')
+const users = require('./mock-users')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
 
@@ -50,12 +51,23 @@ const initDb = () => {
                 picture_HD: cour.picture_HD
             })
         })
-        console.log('la db est mise à jour');
-
-        bcrypt.hash(process.env.USER_PWD, 10)
+        users.map(user => {
+            console.log(user)
+            /* bcrypt.hash(user.u_password, 10)
+            .then(hash => {
+                User.create({
+                    u_email: user.u_email,
+                    u_name: user.u_name,
+                    u_role: user.u_role,
+                    u_statut: user.u_statut,
+                    u_password: hash
+                })
+            }) */
+        })
+        /* bcrypt.hash(process.env.USER_PWD, 10)
         .then(hash => {
             User.create({u_name: process.env.USER_NAME, u_email: process.env.USER_EMAIL, u_password: hash, u_role: process.env.USER_ROLE})
-        })
+        }) */
     })
 }
 
