@@ -25,7 +25,6 @@ module.exports = (app) => {
                     const message = "Le mot de passé n'est pas valide"
                     res.status(401).json({ message })
                 }
-                console.log(user)
                 const token = jwt.sign(
                     {
                         userID: user.id,
@@ -34,11 +33,11 @@ module.exports = (app) => {
                         userRole: user.u_role
                     },
                     process.env.PRIVATE_KEY,
-                    { expiresIn: '24h'}
+                    { expiresIn: '1h'}
                 )
                 
                 const message = "L'utilisateur a été connecté avec succès"
-                return res.status(200).json({ message, data: user, access_token: token })
+                return res.status(200).json({ message, access_token: token })
             })
         })
         .catch(err => {

@@ -52,8 +52,7 @@ const initDb = () => {
             })
         })
         users.map(user => {
-            console.log(user)
-            /* bcrypt.hash(user.u_password, 10)
+            bcrypt.hash(user.u_password, 10)
             .then(hash => {
                 User.create({
                     u_email: user.u_email,
@@ -62,12 +61,8 @@ const initDb = () => {
                     u_statut: user.u_statut,
                     u_password: hash
                 })
-            }) */
+            })
         })
-        /* bcrypt.hash(process.env.USER_PWD, 10)
-        .then(hash => {
-            User.create({u_name: process.env.USER_NAME, u_email: process.env.USER_EMAIL, u_password: hash, u_role: process.env.USER_ROLE})
-        }) */
     })
 }
 

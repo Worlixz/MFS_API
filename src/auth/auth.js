@@ -3,15 +3,15 @@ const jwt = require('jsonwebtoken')
 module.exports = (req, res, next) => {
 
     const token = req.headers.authentication
-    console.log(req.body)
     if(!token){
         return window.location.href='/'
     }
+
     const decodedToken = jwt.verify(token, process.env.PRIVATE_KEY, (error, decodedToken) => {
         if(error){
-            return window.location.href='/'
+            return res.json({valid: false})
         }else{
-            console.log('deco : ',decodedToken)
+            res.json({valid: true})
             next()
         }
     })
