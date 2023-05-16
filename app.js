@@ -27,7 +27,9 @@ require('./src/routes/findCoursBySlug')(app)
 /* Routes pour les articles */
 
 /* Routes Dashboard */
-require('./src/routes/dashboard')(app)
+require('./src/routes/routesDashboard/dashboard')(app)
+require('./src/routes/routesDashboard/findAllCoursOnDashboard')(app)
+require('./src/routes/routesDashboard/findAllArticlesOnDashboard')(app)
 
 /* Routes de connexion */
 require('./src/routes/login')(app)
