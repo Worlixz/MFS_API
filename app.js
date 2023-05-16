@@ -18,16 +18,21 @@ app
 app.get('/', (req, res) => {
     res.json('Hello MFS API')
     const token = req.headers.bearer
-    console.log(token)
 })
 
-app.get('/api/cours', (req, res) => {
-    res.send(cours)
-})
-
+/* Routes pour les cours */
 require('./src/routes/findAllCours')(app)
-require('./src/routes/login')(app)
+require('./src/routes/findCoursBySlug')(app)
+
+/* Routes pour les articles */
+
+/* Routes Dashboard */
 require('./src/routes/dashboard')(app)
+
+/* Routes de connexion */
+require('./src/routes/login')(app)
+
+
 
 
 

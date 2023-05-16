@@ -20,7 +20,7 @@ const cours = [
           "data": {
             "style": "unordered",
             "items": [
-              "Les différentes cellules&nbsp;",
+              "Les différentes cellules",
               "Les cellules musculaires",
               "Les cellules cardiaques"
             ]
@@ -54,6 +54,15 @@ const cours = [
           "data": {
             "text": "Les cellules musculaires",
             "level": 2
+          }
+        },
+        {
+          "id": "hZAjSnqYMX",
+          "type": "image",
+          "data": {
+            "file": {
+              "url": "../../upload/pexels-errin-casano-2356087_1683112795437.jpg",
+            } 
           }
         },
         {
