@@ -35,6 +35,9 @@ require('./src/routes/routesDashboard/findAllArticlesOnDashboard')(app)
 require('./src/routes/login')(app)
 
 
+/* Routes vérification */
+require('./src/routes/verification')(app)
+
 
 
 
