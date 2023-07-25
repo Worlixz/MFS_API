@@ -1,0 +1,29 @@
+PRIVATE_KEY = "clé aléatoire"
+
+
+USER_NAME_ADMIN = "Joe"
+USER_EMAIL_ADMIN = "joe@gmail.com"
+USER_PWD_ADMIN = "joe"
+USER_ROLE_ADMIN = "admin"
+USER_STATUT_ADMIN = "true"
+
+
+USER_NAME_EDITOR = "Alex"
+USER_EMAIL_EDITOR = "alex@gmail.com"
+USER_PWD_EDITOR = "alex"
+USER_ROLE_EDITOR = "editeur"
+USER_STATUT_EDITOR = "true"
+
+
+USER_NAME_PREMIUM = "Mathieu"
+USER_EMAIL_PREMIUM = "mathieu@gmail.com"
+USER_PWD_PREMIUM = "mathieu"
+USER_ROLE_PREMIUM = "membre"
+USER_STATUT_PREMIUM = "true"
+
+
+USER_NAME_MEMBRE = "Doe"
+USER_EMAIL_MEMBRE = "doe@gmail.com"
+USER_PWD_MEMBRE = "doe"
+USER_ROLE_MEMBRE = "membre"
+USER_STATUT_MEMBRE = "false"
